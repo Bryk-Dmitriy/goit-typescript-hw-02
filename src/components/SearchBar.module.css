@@ -1,0 +1,32 @@
+.SearchBarContainer {
+    background-color: #1E90FF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.InputWrapper {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.SearchBarInput {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px; 
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.iconButton {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
