@@ -1,5 +1,5 @@
-import ImageCard from "./ImageCard";
-import { imageTypes } from "../types";
+import ImageCard from "../ImageCard/ImageCard";
+import { imageTypes } from "../../types";
 import css from "./ImageGallery.module.css";
 
 type PropsImageGallery = {

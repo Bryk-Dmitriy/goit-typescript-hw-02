@@ -1,4 +1,4 @@
-import { imageTypes } from "../types";
+import { imageTypes } from "../../types";
 import css from "./ImageCard.module.css";
 
 type ImageCardProps = {

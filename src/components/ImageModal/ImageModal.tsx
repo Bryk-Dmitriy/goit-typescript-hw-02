@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import { imageTypes } from "../types";
+import { imageTypes } from "../../types";
 import css from "./ImageModal.module.css";
 
 Modal.setAppElement("#root");

@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import axios from "axios";
-import SearchBar from "./SearchBar";
-import ImageGallery from "./ImageGallery";
-import LoadMoreBtn from "./LoadMoreBtn";
-import Loader from "./Loader";
-import ImageModal from "./ImageModal";
-import ErrorMessage from "./ErrorMessage";
-import { imageTypes } from "../types";
+import SearchBar from "../SearchBar/SearchBar";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
+import Loader from "../Loader/Loader";
+import ImageModal from "../ImageModal/ImageModal";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import { imageTypes } from "../../types";
 
 type ErrorState = string | null;
+
+type API_response = {
+  results: imageTypes[];
+};
 
 const API_KEY = "n5KXrJKSVZFd1dagsQwGz2lwRu00Yo3bJySc7Li9Bo0";
 
@@ -33,7 +37,7 @@ export default function App(): React.ReactElement {
   ): Promise<void> => {
     setLoading(true);
     try {
-      const response = await axios.get(
+      const response = await axios.get<API_response>(
         "https://api.unsplash.com/search/photos",
         {
           params: { query: searchQuery, page, per_page: 12 },
